@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+header a{
+  text-decoration: none;
+  color: #282c34;
+}
+
+header a:hover{
+  color:darkred;
+}

@@ -1,0 +1,19 @@
+.card-img-top {
+  height: 100%;
+  background-size: contain;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.card-body{
+  padding: 20px;
+}
+
+.card-text {
+  text-align: justify;
+  color: rgb(245, 245, 245);
+}
+
+h3 {
+  color: rgb(245, 245, 245);
+}
