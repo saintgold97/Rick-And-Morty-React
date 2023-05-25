@@ -1,0 +1,32 @@
+.single-character {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.single-card {
+  width: 42rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.list-group-item {
+  color: white;
+  text-align: left;
+}
+
+.list-group-item a {
+  text-decoration: none;
+  color: grey;
+}
+
+.list-group-item a:hover {
+  color: orange;
+}
+
+.item-episode{
+  width: 65px;
+  padding: 7px 5px;
+}

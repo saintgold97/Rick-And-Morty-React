@@ -1,0 +1,9 @@
+.navbar {
+  background-color: #000e0f;
+}
+
+.nav-image {
+  height: 3.5rem;
+  width: 7rem;
+  border-radius: 20px;
+}

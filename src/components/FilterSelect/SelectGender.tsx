@@ -9,6 +9,7 @@ export const SelectGender = ({ onChange }: SearchProps) => {
   const [gender] = useState("");
   return (
         <Form.Select
+        style={{marginLeft:"1rem"}}
           title="Filter"
           value={gender}
           onChange={(event) => {

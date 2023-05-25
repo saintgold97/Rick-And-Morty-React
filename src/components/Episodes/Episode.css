@@ -1,0 +1,10 @@
+.episode-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+
+h2 {
+  color: white;
+}

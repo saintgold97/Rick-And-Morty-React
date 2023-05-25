@@ -1,3 +1,8 @@
+export interface Response {
+  info:    Info;
+  results: Character[];
+}
+
 export interface Info {
   count: number;
   pages: number;
@@ -6,18 +11,18 @@ export interface Info {
 }
 
 export interface Character {
-  id: number
+  id?: number
   name: string
   status: string
   species: string
-  type: string
+  type?: string
   gender: string
   origin: Origin
-  location: Location
+  location?: Location
   image: string
-  episode: string[]
-  url: string
-  created: string
+  episode?: string[]
+  url?: string
+  created?: string
 }
 
 export interface Origin {

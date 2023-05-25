@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Response, Character, Info } from "../models/character";
+import { Episode, Info, Result } from "../models/episodes";
 import { useSearchParams } from "react-router-dom";
-export const urlCharacters = "https://rickandmortyapi.com/api/character";
+export const urlEpisode = "https://rickandmortyapi.com/api/episode";
 
-export const useCharacters = (props: {
+export const useEpisodes = (props: {
   page?: number;
-  name?: string;
-  status?: string;
-  gender?: string;
-}): [Character[], boolean, number] => {
-  const [users, setUsers] = useState<Character[]>([]);
-  const [isLoading, setLoading] = useState(false);
+  episode?: string;
+  name?:string
+}): [Episode["results"], number] => {
+  const [episodes, setEpisodes] = useState<Episode["results"]>([]);
+  //const [isLoading, setLoading] = useState(false);
   const [totalPages, setTotalPages] = useState<Info["pages"]>(0);
-  const { page, name, status, gender } = props;
+  const { page, episode, name } = props;
   const [params, setParams] = useSearchParams();
 
   const objectToQueryParams = (obj: any) => {
@@ -29,27 +28,27 @@ export const useCharacters = (props: {
   useEffect(() => {
     const urlParams = objectToQueryParams({
       page: String(page),
-      name: name,
-      status: status,
-      gender: gender,
+      episode: episode,
+      name: name
     });
+    //console.log(urlParams)
 
     setParams(urlParams);
-    setLoading(true);
+  /*   setLoading(true); */
     setTimeout(() => {
       axios
-        .get<Response>(`${urlCharacters}?${urlParams}`)
+        .get<Result>(`${urlEpisode}?${urlParams}`)
         .then((response: any) => {
-          setUsers(response.data.results);
+          setEpisodes(response.data.results);
           setTotalPages(response.data.info.pages);
         })
         .catch((err) => {
           console.log(err);
         })
-        .finally(() => {
+      /*   .finally(() => {
           setLoading(false);
-        });
+        }); */
     }, 1000);
-  }, [page, name, status, gender]);
-  return [users, isLoading, totalPages];
+  }, [page, episode, name]);
+  return [episodes, totalPages];
 };

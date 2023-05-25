@@ -1,14 +1,12 @@
-import React from "react";
 import { Button } from "react-bootstrap";
 
 export const Pages = ({ currentPage, onPageChange, totalPages }: any) => {
   return (
-    <div>
+    <div className="mt-3 mb-3">
       <Button
         onClick={() => {
-          onPageChange(Math.max(1, currentPage - 1));
+          onPageChange(Math.max(1, Number(currentPage) - 1));
         }}
-        className="search-button"
         variant="outline-secondary"
       >
         Prev Page
@@ -20,7 +18,6 @@ export const Pages = ({ currentPage, onPageChange, totalPages }: any) => {
             totalPages > currentPage ? currentPage + 1 : currentPage
           );
         }}
-        className="search-button"
         variant="outline-secondary"
       >
         Next Page

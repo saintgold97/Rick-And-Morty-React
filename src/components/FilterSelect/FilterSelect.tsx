@@ -1,7 +1,6 @@
 import React from "react";
 import { SelectStatus } from "./SelectStatus";
 import { SelectGender } from "./SelectGender";
-import { Container } from "react-bootstrap";
 
 type FilterSelectProps = {
   onChangeStatus: (status: string) => void;
@@ -13,11 +12,9 @@ export const FilterSelect = ({
   onChangeGender,
 }: FilterSelectProps) => {
   return (
-    <Container>
       <div style={{display:"flex"}}>
         <SelectStatus onChange={onChangeStatus} />
         <SelectGender onChange={onChangeGender} />
       </div>
-    </Container>
   );
 };

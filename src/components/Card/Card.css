@@ -1,12 +1,41 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    align-items: center;
+
+.h5 {
+  color:aliceblue;
 }
 
-.card{
-    background-color: rgb(39, 43, 51);
-    margin-bottom: 0.5rem;
-} 
+.card {
+  background-color: #213513;
+  margin-bottom: 0.5rem;
+}
+
+.theme-dark{
+  background-color: rgb(60, 62, 68);
+}
+
+.theme-green{
+  background-color: #213513;
+}
+
+.card-img-top {
+  height: 100%;
+  background-size: contain;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-text {
+  text-align: left;
+  color: rgb(245, 245, 245);
+}
+
+h3 {
+  color: rgb(245, 245, 245);
+}
+
+span{
+    color: orange;
+}

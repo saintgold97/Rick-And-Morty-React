@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 type SearchProps = {
   onSearch: (searchText: string) => void;
@@ -13,10 +13,9 @@ export const SearchBar = ({ onSearch }: SearchProps) => {
   };
 
   return (
-    <Container>
       <Form className="d-flex">
         <Form.Control
-          placeholder="Search Characters"
+          placeholder="Search"
           onChange={(event) => {
             setTextInInput(event.target.value);
           }}
@@ -32,6 +31,5 @@ export const SearchBar = ({ onSearch }: SearchProps) => {
           Search
         </Button>
       </Form>
-    </Container>
   );
 };
