@@ -13,7 +13,6 @@ export const SelectGender = ({ onChange }: SearchProps) => {
           title="Filter"
           value={gender}
           onChange={(event) => {
-            //gestisce l'input dell'utente con variabile di stato
             onChange(event.target.value);
           }}
         >

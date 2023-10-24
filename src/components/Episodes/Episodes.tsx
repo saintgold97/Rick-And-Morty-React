@@ -42,7 +42,7 @@ export const Episodes = () => {
               <div className="episode-item" key={`${index}-${item.id}`}>
                 <Link
                   className="text-decoration-none"
-                  to={`/episode/${item.id}`}
+                  to={`/episodes/${item.id}`}
                 >
                   <span>{item.episode}</span>
                   <h3>{item.name}</h3>

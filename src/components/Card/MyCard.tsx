@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.css";
-import "./Card.css";
+import "./MyCard.css";
 import { Character } from "../../models/character";
 import {Card} from "react-bootstrap"
 import { useContext } from "react";
 import { BackgroundContext, FontContext } from "../Characters/Characters";
 
 
-export const Cards = ({ name, status, species, gender, image, origin }:Character) => {
+export const MyCard = ({ name, status, species, gender, image, origin }:Character) => {
   const font = useContext(FontContext)
   const theme = useContext(BackgroundContext)
   return (
@@ -18,7 +18,7 @@ export const Cards = ({ name, status, species, gender, image, origin }:Character
           <Card.Text><span>Status:</span> {status}</Card.Text>
           <Card.Text><span>Species:</span> {species}</Card.Text>
           <Card.Text><span>Gender:</span> {gender}</Card.Text>
-          <Card.Text><span>Origin:</span> {origin.name}</Card.Text>
+          <Card.Text><span>Origin:</span> {origin?.name}</Card.Text>
         </Card.Body>
       </Card>
     </section>

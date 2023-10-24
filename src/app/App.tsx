@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Characters } from "../components/Characters/Characters";
-import { BrowserRouter, Link, Outlet, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import { SingleCharacter } from "../components/SingleCharacter/SingleCharacter";
 import { Episodes } from "../components/Episodes/Episodes";
 import { MyNav } from "../components/Navbar/Navbar";
@@ -19,12 +19,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Outlet />}>
             <Route path="characters">
-              <Route index element={<Characters />}></Route>
-              <Route path=":id" element={<SingleCharacter />}></Route>
+              <Route index element={<Characters />} />
+              <Route path=":id" element={<SingleCharacter />} />
             </Route>
-            <Route path="episode">
-              <Route index element={<Episodes />}></Route>
-              <Route path=":id" element={<SingleEpisode />}></Route>
+            <Route path="episodes">
+              <Route index element={<Episodes />} />
+              <Route path=":id" element={<SingleEpisode />} />
             </Route>
           </Route>
         </Routes>

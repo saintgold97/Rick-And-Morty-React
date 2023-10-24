@@ -13,7 +13,7 @@ export const useEpisodes = (props: {
   //const [isLoading, setLoading] = useState(false);
   const [totalPages, setTotalPages] = useState<Info["pages"]>(0);
   const { page, episode, name } = props;
-  const [params, setParams] = useSearchParams();
+  const [, setParams] = useSearchParams();
 
   const objectToQueryParams = (obj: any) => {
     const params = new URLSearchParams();
@@ -49,6 +49,6 @@ export const useEpisodes = (props: {
           setLoading(false);
         }); */
     }, 1000);
-  }, [page, episode, name]);
+  }, [page, episode, name, setParams]);
   return [episodes, totalPages];
 };

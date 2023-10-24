@@ -17,7 +17,7 @@ export interface Character {
   species: string
   type?: string
   gender: string
-  origin: Origin
+  origin?: Origin
   location?: Location
   image: string
   episode?: string[]
@@ -27,7 +27,7 @@ export interface Character {
 
 export interface Origin {
   name: string
-  url: string
+  url?: string
 }
 
 export interface Location {

@@ -17,8 +17,8 @@ export const MyNav = () => {
           </Navbar.Brand>
         </Link>
         <div className="d-flex">
-          <Link className="pe-4" to="/character">Character</Link>
-          <Link to="/episode">Episode</Link>
+          <Link className="pe-4" to="/characters">Characters</Link>
+          <Link to="/episodes">Episodes</Link>
         </div>
       </Container>
     </Navbar>

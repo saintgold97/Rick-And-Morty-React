@@ -14,7 +14,7 @@ export const useCharacters = (props: {
   const [isLoading, setLoading] = useState(false);
   const [totalPages, setTotalPages] = useState<Info["pages"]>(0);
   const { page, name, status, gender } = props;
-  const [params, setParams] = useSearchParams();
+  const [, setParams] = useSearchParams();
 
   const objectToQueryParams = (obj: any) => {
     const params = new URLSearchParams();
@@ -50,6 +50,6 @@ export const useCharacters = (props: {
           setLoading(false);
         });
     }, 1000);
-  }, [page, name, status, gender]);
+  }, [page, name, status, gender, setParams]);
   return [users, isLoading, totalPages];
 };

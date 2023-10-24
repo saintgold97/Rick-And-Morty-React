@@ -5,7 +5,6 @@ import {
   Link,
   useNavigate,
   useParams,
-  useSearchParams,
 } from "react-router-dom";
 import { Character } from "../../models/character";
 import { Button, Card, ListGroup } from "react-bootstrap";
@@ -18,7 +17,7 @@ export const SingleCharacter = () => {
   const [character, setCharacter] = useState<Character | null>(null);
 
   const changeCharacter = (id: number) => {
-    navigate(`/character/${id}`);
+    navigate(`/characters/${id}`);
   };
   useEffect(() => {
     axios.get<Character>(`${urlCharacters}/${id}`).then((response) => {
@@ -56,8 +55,8 @@ export const SingleCharacter = () => {
               <span>Gender:</span> {character?.gender}
             </ListGroup.Item>
             <ListGroup.Item>
-              <Link to={`${character?.origin.url}`}>
-                <span>Origin:</span> {character?.origin.name}{" "}
+              <Link to={`${character?.origin?.url}`}>
+                <span>Origin:</span> {character?.origin?.name}{" "}
               </Link>
             </ListGroup.Item>
             <ListGroup.Item>
@@ -85,7 +84,7 @@ export const SingleCharacter = () => {
             return (
               <div className="col-1 item-episode" key={index}>
              
-                  <Button onClick={()=> navigate(`/episode/${id}`)} variant="outline-secondary">{index + 1}</Button>
+                  <Button onClick={()=> navigate(`/episodes/${id}`)} variant="outline-secondary">{index + 1}</Button>
                 
               </div>
             );

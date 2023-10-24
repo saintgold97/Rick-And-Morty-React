@@ -12,7 +12,6 @@ export const SelectStatus = ({ onChange }: SearchProps) => {
           title="Filter"
           value={status}
           onChange={(event) => {
-            //gestisce l'input dell'utente con variabile di stato
             onChange(event.target.value);
           }}
         >

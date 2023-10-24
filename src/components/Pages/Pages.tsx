@@ -1,6 +1,16 @@
 import { Button } from "react-bootstrap";
 
-export const Pages = ({ currentPage, onPageChange, totalPages }: any) => {
+interface IPages {
+  currentPage: number;
+  onPageChange: (currentPage: number) => void;
+  totalPages: number;
+}
+
+export const Pages: React.FC<IPages> = ({
+  currentPage,
+  onPageChange,
+  totalPages,
+}) => {
   return (
     <div className="mt-3 mb-3">
       <Button

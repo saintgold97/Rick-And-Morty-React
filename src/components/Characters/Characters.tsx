@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react";
 import "./Characters.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { Cards } from "../Card/Card";
+import { MyCard } from "../Card/MyCard";
 import { useCharacters } from "../../Hooks/useCharacters";
 import { CardLoaderContainer } from "../CardLoader/CardLoader";
 import { SearchBar } from "../SearchBar/SearchBar";
@@ -70,9 +70,9 @@ export const Characters = () => {
                     >
                       <Link
                         className="text-decoration-none"
-                        to={`/character/${item.id}`}
+                        to={`/characters/${item.id}`}
                       >
-                        <Cards
+                        <MyCard
                           name={item.name}
                           status={item.status}
                           species={item.species}
